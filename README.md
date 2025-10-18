@@ -24,10 +24,10 @@ Goal: The system maps architect-provided room labels to standardized engineering
 ### Evaluation
 Test Projects: 3, 5, 8, 10
 
-Invalid Predictions (Ensuring the LLM does not predict outside of the allowed labels):
-  Count: 1 - Percentage: 0.18%
+Invalid Predictions (Ensuring the LLM does not predict outside of the allowed labels):  
+  Count: 1 - Percentage: 0.18%  
 
-Total Accuracy (all rows):
-  Total valid predictions: 565
-  Correct: 445  Incorrect: 120
+Total Accuracy (all rows):  
+  Total valid predictions: 565  
+  Correct: 445  Incorrect: 120  
   Accuracy: 78.76% (445/565)
