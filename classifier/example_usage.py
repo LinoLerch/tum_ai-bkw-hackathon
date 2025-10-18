@@ -5,7 +5,7 @@ This demonstrates how to use the classify_room_type module
 in a standalone way (without the example projects setup).
 """
 
-from classify_room_type import classify_room_types
+from classify_room_type import classify_room_types, classify_from_csv
 import pandas as pd
 
 # Example 1: Simple usage with a small dataset
@@ -47,15 +47,43 @@ print("\n")
 # Example 2: Using classify_from_csv
 print("Example 2: Classification from CSV file")
 print("="*60)
-print("This example would load from a CSV file:")
-print("from classify_room_type import classify_from_csv")
-print()
-print("result = classify_from_csv(")
-print("    input_csv_path='my_input.csv',")
-print("    reference_classes=['Class A', 'Class B', 'Class C'],")
-print("    output_csv_path='my_output.csv'")
-print(")")
-print()
+# print("This example would load from a CSV file:")
+# print("from classify_room_type import classify_from_csv")
+# print()
+# print("result = classify_from_csv(")
+# print("    input_csv_path='my_input.csv',")
+# print("    reference_classes=['Class A', 'Class B', 'Class C'],")
+# print("    output_csv_path='my_output.csv'")
+# print(")")
+# print()
+result = classify_from_csv(
+    input_csv_path='classifier/inputs/input_P5.csv',
+    reference_classes=[
+      "Flex-/ Co-Work/",
+      "Einzel-/Zweierbüros",
+      "Technikum",
+      "Smart Farming",
+      "Robotik",
+      "Verkehrsflächen, Flure",
+      "Teeküchen",
+      "WCs",
+      "ELT-Zentrale",
+      "Putzmittel/ Lager",
+      "Lager innenliegend",
+      "TGA-Zentrale",
+      "Etagenverteiler",
+      "ELT-Schacht",
+      "Batterieräume",
+      "Drucker-/Kopierräume",
+      "Treppenhäuser/Magistrale",
+      "Schächte",
+      "Aufzüge",
+      "Serminarraum",
+      "Diele"
+    ],
+    output_csv_path='classifier/predictions/prediction_P5.csv'
+)
+
 
 # Example 3: Integration snippet
 print("Example 3: Integration in a Larger System")
